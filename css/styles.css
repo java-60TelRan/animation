@@ -1,36 +1,61 @@
-@keyframes pop {
+@keyframes surroundingMove {
     0% {
-        transform: scale(1);
-    }
-    20% {
-        transform: scale(1.5);
-    }
-    50% {
-        transform: translate(100px);
-        background-color: tomato
+        transform: rotate(0deg) translate(100px) rotate(360deg);
     }
     100% {
-        transform: translate(0);
-        background-color: gold;
+        transform: rotate(360deg) translate(100px) rotate(-360deg);
     }
+    
 }
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
-.box {
+.fixedPart {
     width:150px;
     height: 150px;
     background-color: gold;
-    font-size: 1.3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
    
     
 }
-.animation-pop {
-     animation: fadeInRight 2s linear infinite ;
+.movingPart {
+    width:50px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 50%;
+    transform: translate(100px);
 }
-.box-button {
+.animation {
+     animation: surroundingMove 4s linear infinite ;
+}
+.btn {
     cursor: pointer;
+    width: 100px;
+    height: 50px; 
+    border-radius: 40%;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    display: inline-block;
+}
+.buttonsGroup {
+    width: 400px;
+    height: 60px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 120px;
+}
+.btnStart {
+    background-color: green;
+}
+.btnStop {
+    background-color: red;
 }

@@ -1,4 +1,7 @@
-let boxAnimationElement = document.getElementById("box_animate");
-function startStop() {
-  boxAnimationElement.classList.toggle("animation-pop");
+let boxAnimationElement = document.getElementById("moving-circle");
+function start() {
+  boxAnimationElement.classList.add("animation");
+}
+function stop() {
+  boxAnimationElement.classList.remove("animation");
 }

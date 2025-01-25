@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    
 </head>
 <body>
-    <div class="container">
-        <div class="box">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, debitis.</div>
-    <div class="box box-button" id="box_animate" onclick="startStop()">Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
+    <div class="fixedPart">
+        <div class="movingPart" id="moving-circle"></div>
+    </div>
+    <div class="buttonsGroup">
+        <button class="btn btnStart" onclick="start()">Start</button>
+        <button class="btn btnStop" onclick="stop()">Stop</button>
     </div>
 <script src="src/animator.js"></script>
 </body>
